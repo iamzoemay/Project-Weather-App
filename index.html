@@ -21,9 +21,81 @@
   </head>
   <body>
     <div class="container">
-      <h1>Hello World</h1>
-      <a href="" class="btn btn-primary">Click</a>
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Search for city"
+                class="form-control"
+                autocomplete="off"
+                autofocus="on"
+                id="city-input"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+        <h1 class="city" id="city">Johannsburg</h1>
+        <div class="sun">☀</div>
+        <h2 id="temperature" class="units">°C</h2>
+
+        <div class="row">
+          <div class="col-12 description">
+            <ul>
+              <li><span id="description"></span></li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
+          </div>
+          <div class="col-12 wednesday" id="date"></div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-2 thurs days">Thurs</div>
+          <div class="col-2 days">Fri</div>
+          <div class="col-2 days">Sat</div>
+          <div class="col-2 days">Sun</div>
+          <div class="col-2 days">Mon</div>
+        </div>
+        <div class="row">
+          <div class="col-2 thurs-emoji emo">🌦</div>
+          <div class="col-2 emoji emo">⚡</div>
+          <div class="col-2 emojis emo">⛅</div>
+          <div class="col-2 emojie emo">☀</div>
+          <div class="col-2 emojii emo">⛅</div>
+        </div>
+        <div class="row">
+          <div class="col-2 thurs days">28°/16</div>
+          <div class="col-2 days">28°/16</div>
+          <div class="col-2 days">30°/16°</div>
+          <div class="col-2 days">30°/15°</div>
+          <div class="col-2 days">31°/16°</div>
+        </div>
+      </div>
     </div>
+    <span class="github">
+      <a href="https://github.com/iamzoemay/Project-Weather-App" target="_blank"
+        >Open-Source Code</a
+      >
+      by Ntokozo Masuku</span
+    >
+
     <script src="src/script.js"></script>
   </body>
 </html>
