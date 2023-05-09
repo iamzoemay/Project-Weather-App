@@ -15,6 +15,7 @@
       integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
 
     <title>Weather App</title>
@@ -53,10 +54,8 @@
         </form>
         <h1 class="city" id="city">Johannsburg</h1>
         <div class="sun">☀</div>
-        <h2 id="temperature" class="units">
-          12
-          <span class="degrees">°C | <a href="#">°F</a></span>
-        </h2>
+        <h2 id="temperature" class="units"></h2>
+        <h2 class="degrees">°C | <a href="#">°F</a></h2>
 
         <div class="row">
           <div class="col-12 description">

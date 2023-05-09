@@ -30,6 +30,11 @@ li {
   height: 19px;
   line-height: 1;
   list-style: none;
+  text-transform: capitalize;
+  text-align: left;
+  position: relative;
+  top: -70px;
+  right: 5px;
 }
 
 hr {
@@ -44,7 +49,8 @@ hr {
 .degrees {
   font-size: 20px;
   position: relative;
-  top: -10px;
+  top: -112px;
+  left: 115px;
 }
 .wednesday {
   text-align: right;
