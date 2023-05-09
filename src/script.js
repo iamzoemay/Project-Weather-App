@@ -25,7 +25,6 @@ function formatDate(date) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.temperature.current
   );
@@ -37,11 +36,19 @@ function displayTemperature(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+    );
+  document
+    .querySelector("#icon")
+    .setAttribute("alt", response.data.condition.description);
 }
-
+let city = "Perth";
 let apiKey = "43o61eb10306ca5f7d4b73f203t3be63";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Cape_Town&key=43o61eb10306ca5f7d4b73f203t3be63&units=metric`;
-
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=43o61eb10306ca5f7d4b73f203t3be63&units=metric`;
 axios.get(apiUrl).then(displayTemperature);
 
 let dateElement = document.querySelector("#date");

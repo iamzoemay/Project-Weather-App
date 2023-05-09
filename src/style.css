@@ -12,8 +12,8 @@ h1 {
 }
 h2 {
   position: relative;
-  top: -70px;
-  left: 72px;
+  top: -15px;
+  left: 0px;
   font-size: 40px;
   padding: 0;
   margin: 0 auto;
@@ -30,11 +30,10 @@ li {
   height: 19px;
   line-height: 1;
   list-style: none;
-
   text-align: left;
   position: relative;
-  top: -70px;
-  right: 5px;
+  top: -20px;
+  right: 132px;
 }
 li:first-letter {
   text-transform: capitalize;
@@ -45,21 +44,21 @@ hr {
 .sun {
   font-size: 40px;
   position: relative;
-  top: -10px;
-  left: 15px;
+  top: -40px;
+  left: 0px;
 }
 .degrees {
   font-size: 20px;
   position: relative;
-  top: -112px;
-  left: 115px;
+  top: -58px;
+  left: 40px;
 }
 .wednesday {
   text-align: right;
   position: relative;
-  top: -60px;
-  right: 20px;
-  font-size: 25px;
+  top: 0px;
+  right: 5px;
+  font-size: 15px;
   margin-top: -50px;
 }
 .container {
