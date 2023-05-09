@@ -30,13 +30,15 @@ li {
   height: 19px;
   line-height: 1;
   list-style: none;
-  text-transform: capitalize;
+
   text-align: left;
   position: relative;
   top: -70px;
   right: 5px;
 }
-
+li:first-letter {
+  text-transform: capitalize;
+}
 hr {
   margin-top: 50px;
 }
@@ -55,8 +57,8 @@ hr {
 .wednesday {
   text-align: right;
   position: relative;
-  top: -40px;
-  right: 25px;
+  top: -60px;
+  right: 20px;
   font-size: 25px;
   margin-top: -50px;
 }
