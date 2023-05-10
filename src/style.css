@@ -22,7 +22,6 @@ ul {
   margin: 0 0 -50px;
   padding: 20;
 }
-
 li {
   color: #050303;
   font-size: 16px;
@@ -36,7 +35,6 @@ li {
   right: 132px;
   margin: -15px 10px 20px;
 }
-
 li:first-letter {
   text-transform: capitalize;
 }
@@ -54,6 +52,11 @@ hr {
   position: relative;
   top: -58px;
   left: 40px;
+}
+.degrees .active {
+  color: rgb(33, 37, 41);
+  text-decoration: none;
+  cursor: default;
 }
 .wednesday {
   text-align: right;
