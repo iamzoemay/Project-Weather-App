@@ -24,30 +24,50 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
   console.log(response.data.daily);
+  let forcast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Thurs", "Fri", "Sat", "Sun", "Mon", "Tues", "Wed"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-3">
-              <div class="weather-forecast-date">${day}</div>
+  forcast.forEach(function (forecastDay, index) {
+    if (index < 4) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-3">
+              <div class="weather-forecast-date">${formatDay(
+                forecastDay.time
+              )}</div>
               <img
-                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+                  forecastDay.condition.icon
+                }.png"
                 alt=""
                 width="42"
                 class="icons"
               />
               <div class="weather-forecast-temperature">
-                <span class="weather-forecast-temperature-max"> 18°</span>
-                <span class="weather-forecast-temperature-min"> 10°</span>
+                <span class="weather-forecast-temperature-max"> ${Math.round(
+                  forecastDay.temperature.maximum
+                )}°</span>
+                <span class="weather-forecast-temperature-min"> ${Math.round(
+                  forecastDay.temperature.minimum
+                )}°</span>
               </div>
             </div>  
         `;
+    }
   });
+
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
