@@ -24,10 +24,6 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
-let dateElement = document.querySelector("#date");
-let currentTime = new Date();
-dateElement.innerHTML = formatDate(currentTime);
-
 function displayTemperature(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.temperature.current
@@ -66,11 +62,6 @@ function search(event) {
   searchCity(city);
 }
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
-
-searchCity("Johannesburg");
-
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
@@ -82,9 +73,6 @@ function convertToFahrenheit(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
@@ -95,7 +83,19 @@ function convertToCelsius(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+let celsiusTemperature = null;
+
+let dateElement = document.querySelector("#date");
+let currentTime = new Date();
+dateElement.innerHTML = formatDate(currentTime);
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", search);
+
+searchCity("Johannesburg");
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
-
-let celsiusTemperature = null;
