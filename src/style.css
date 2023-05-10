@@ -79,6 +79,25 @@ hr {
   padding-bottom: 30px;
   padding-top: 20px;
 }
+.weather-forecast {
+  text-align: center;
+}
+.weather-forecast-date {
+  margin-left: 15px;
+}
+.icons {
+  margin-left: 20px;
+}
+.weather-forecast-temperature-min {
+  color: gray;
+}
+.weather-forecast-temperature-max {
+  color: #050303;
+}
+.weather-forecast-temperature {
+  margin-left: 25px;
+}
+
 .github {
   display: block;
   text-align: center;
