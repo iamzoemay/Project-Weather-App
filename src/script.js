@@ -46,11 +46,23 @@ function displayTemperature(response) {
     .querySelector("#icon")
     .setAttribute("alt", response.data.condition.description);
 }
-let city = "Perth";
-let apiKey = "43o61eb10306ca5f7d4b73f203t3be63";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=43o61eb10306ca5f7d4b73f203t3be63&units=metric`;
-axios.get(apiUrl).then(displayTemperature);
+function searchCity(city) {
+  let apiKey = "43o61eb10306ca5f7d4b73f203t3be63";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=43o61eb10306ca5f7d4b73f203t3be63&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function search(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city-input").value;
+  searchCity(city);
+}
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", search);
+
+searchCity("Johannesburg");
