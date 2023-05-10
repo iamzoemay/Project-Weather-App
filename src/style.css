@@ -84,18 +84,21 @@ hr {
 }
 .weather-forecast-date {
   margin-left: 15px;
+  font-size: 15px;
 }
 .icons {
   margin-left: 20px;
 }
 .weather-forecast-temperature-min {
   color: gray;
+  font-size: 15px;
 }
 .weather-forecast-temperature-max {
   color: #050303;
 }
 .weather-forecast-temperature {
   margin-left: 25px;
+  font-size: 15px;
 }
 
 .github {
